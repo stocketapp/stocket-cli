@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
 require "stocket"
+
+Stocket::CLI.start(ARGV)
