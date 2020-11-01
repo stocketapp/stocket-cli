@@ -16,7 +16,7 @@ module Stocket
 
     desc "build", "Build the app"
     option :scheme, :default => "Development"
-    option :device => :boolean, :default => false
+    option :device, :type => :boolean, :default => false
     def build
       device_type = options[:device] ? "--device" : "--simulator"
       device_name = options[:device] ? "'Henry’s iPhone 11 Pro'" : "'iPhone 12 Pro'"
@@ -24,6 +24,8 @@ module Stocket
       build_app(device_type, device_name, options[:scheme])
     end
 
+
+    # private methods
     private
     def start_server(reset)
       system "npx react-native start#{reset}"
