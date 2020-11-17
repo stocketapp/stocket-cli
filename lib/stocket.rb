@@ -14,14 +14,14 @@ module Stocket
       start_server(options[:reset] ? " --reset-cache" : "")
     end
 
-    desc "build", "Build the app"
+    desc "run-app", "Build and run the app in the simulator"
     option :scheme, :default => "Development"
     option :device, :type => :boolean, :default => false
-    def build
+    def run_app
       device_type = options[:device] ? "--device" : "--simulator"
       device_name = options[:device] ? "'Henry’s iPhone 11 Pro'" : "'iPhone 12 Pro'"
       
-      build_app(device_type, device_name, options[:scheme])
+      build_and_run(device_type, device_name, options[:scheme])
     end
 
 
@@ -31,7 +31,7 @@ module Stocket
       system "npx react-native start#{reset}"
     end
 
-    def build_app(device_type, device_name, scheme)
+    def build_and_run(device_type, device_name, scheme)
       stocket_brand_msg("Building Stocket on #{device_name} using the #{options[:scheme]} scheme.")
       stocket_brand_msg("npx react-native run-ios #{device_type} #{device_name} --scheme #{scheme}")
 
