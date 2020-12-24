@@ -48,9 +48,10 @@ module Stocket
     end
 
     def create_config(env)
-      system "sh #{__dir__}/env/#{env}-env.sh"
-      puts __dir__
-      system "ruby #{__dir__}/stocket/create_config.rb"
+      puts "#{__dir__}"
+      puts "\n***Exporting Production Environment Variables started***\n"
+      system "source #{__dir__}/env/#{env}-env.sh && ruby #{__dir__}/stocket/create_config.rb"
+      puts "\n***Finished creating configuration***"
     end
 
     def stocket_brand_msg(msg)
