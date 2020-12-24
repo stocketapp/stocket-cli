@@ -24,6 +24,13 @@ module Stocket
       build_and_run(device_type, device_name, options[:scheme])
     end
 
+    desc "config", "Create config file for Stocket"
+    option :env, :default => "dev"
+    def config
+      create_config(options[:env])
+      puts_ascii
+    end
+
 
     # private methods
     private
@@ -38,6 +45,12 @@ module Stocket
       system "npx react-native run-ios #{device_type} #{device_name} --scheme #{scheme}"
 
       puts_ascii
+    end
+
+    def create_config(env)
+      system "sh #{__dir__}/env/#{env}-env.sh"
+      puts __dir__
+      system "ruby #{__dir__}/stocket/create_config.rb"
     end
 
     def stocket_brand_msg(msg)
