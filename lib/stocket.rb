@@ -31,6 +31,10 @@ module Stocket
       puts_ascii
     end
 
+    desc "server", "Start Rails Server"
+    def server
+      system "cd ~/Projects/Server/stocket-api && rails s"
+    end
 
     # private methods
     private
