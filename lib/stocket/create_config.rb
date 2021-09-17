@@ -10,6 +10,7 @@ IAPHUB_ENV = ENV['IAPHUB_ENV']
 STOCKET_API_URL=ENV['STOCKET_API_URL']
 ONESIGNAL_APPID = ENV['ONESIGNAL_APPID']
 STOCKET_APPSTORE_APP_SECRET = ENV['STOCKET_APPSTORE_APP_SECRET']
+GOOGLE_STOCKET_WEB_CLIENT_ID = ENV['GOOGLE_STOCKET_WEB_CLIENT_ID']
 
 open("./config.js", 'w') { |output_file|
   output_file.puts "export const IEX_CLOUD_KEY = '#{IEX_CLOUD_KEY}'"
@@ -26,4 +27,6 @@ open("./config.js", 'w') { |output_file|
   puts "Added STOCKET_APPSTORE_APP_SECRET"
   output_file.puts "export const STOCKET_API_URL = '#{STOCKET_API_URL}'"
   puts "Added STOCKET_API_URL"
+  output_file.puts "export const GOOGLE_STOCKET_WEB_CLIENT_ID = '#{GOOGLE_STOCKET_WEB_CLIENT_ID}'"
+  puts "Added GOOGLE_STOCKET_WEB_CLIENT_ID"
 }

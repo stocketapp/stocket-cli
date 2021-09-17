@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    stocket (0.4.0)
+    stocket (0.5.2)
 
 GEM
   remote: https://rubygems.org/
@@ -20,4 +20,4 @@ DEPENDENCIES
   thor
 
 BUNDLED WITH
-   2.1.4
+   2.2.12
