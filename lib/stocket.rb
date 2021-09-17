@@ -35,14 +35,14 @@ module Stocket
     # private methods
     private
     def start_server(reset)
-      system "npx react-native start#{reset}"
+      system "cd ~/Projects/ReactNative/stocket && npx react-native start#{reset}"
     end
 
     def build_and_run(device_type, device_name, scheme)
       stocket_brand_msg("Building Stocket on #{device_name} using the #{options[:scheme]} scheme.")
       stocket_brand_msg("npx react-native run-ios #{device_type} #{device_name} --scheme #{scheme}")
 
-      system "npx react-native run-ios #{device_type} #{device_name} --scheme #{scheme}"
+      system "cd ~/Projects/ReactNative/stocket && npx react-native run-ios #{device_type} #{device_name} --scheme #{scheme}"
 
       puts_ascii
     end

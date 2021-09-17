@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    stocket (0.5.2)
+    stocket (0.6.0)
 
 GEM
   remote: https://rubygems.org/
