@@ -14,10 +14,10 @@ module Stocket
       start_server(options[:reset] ? " --reset-cache" : "")
     end
 
-    desc "run-app", "Build and run the app in the simulator"
+    desc "ios", "Build and run the app in the iOS simulator"
     option :scheme, :default => "Development"
     option :device, :type => :boolean, :default => false
-    def run_app
+    def ios
       device_type = options[:device] ? "--device" : "--simulator"
       device_name = options[:device] ? "'Henry’s iPhone 11 Pro'" : "'iPhone 12 Pro'"
       
