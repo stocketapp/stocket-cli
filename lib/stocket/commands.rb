@@ -3,7 +3,7 @@ module Stocket
     def self.create_config(env)
       puts "#{Dir.pwd}"
       puts "\n***Exporting #{env} environment variables***\n"
-      system "source #{Dir.pwd}/lib/env/#{env}-env.sh && ruby #{__dir__}/create_config.rb"
+      system "source #{__dir__}/env/#{env}-env.sh && ruby #{__dir__}/create_config.rb"
       puts "\n***Finished creating configuration***"
     end
 
@@ -12,8 +12,6 @@ module Stocket
     end
 
     def self.build_and_run(device_type, device_name, scheme)
-      stocket_brand_msg("Building Stocket on #{device_name} using the #{options[:scheme]} scheme.")
-      stocket_brand_msg("npx react-native run-ios #{device_type} #{device_name} --scheme #{scheme}")
       create_config("dev")
       puts "Set environment to DEVELOPMENT"
 
