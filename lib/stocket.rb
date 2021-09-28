@@ -1,10 +1,11 @@
 require "stocket/version"
 require "thor"
 require "colorize"
+require_relative "./stocket/commands"
 
 module Stocket
   class Error < StandardError; end
-
+  
   class CLI < Thor
     desc "start", "Starts the Stocket React Native server"
     option :reset, :type => :boolean, :default => false, :aliases => "-r"
@@ -27,7 +28,7 @@ module Stocket
     desc "config", "Create config file for Stocket"
     option :env, :default => "dev"
     def config
-      create_config(options[:env])
+      Commands.create_config(options[:env])
       puts_ascii
     end
 
@@ -51,12 +52,12 @@ module Stocket
       puts_ascii
     end
 
-    def create_config(env)
-      puts "#{__dir__}"
-      puts "\n***Exporting #{env} environment variables***\n"
-      system "source #{__dir__}/env/#{env}-env.sh && ruby #{__dir__}/stocket/create_config.rb"
-      puts "\n***Finished creating configuration***"
-    end
+    # def create_config(env)
+    #   puts "#{__dir__}"
+    #   puts "\n***Exporting #{env} environment variables***\n"
+    #   system "source #{__dir__}/env/#{env}-env.sh && ruby #{__dir__}/stocket/create_config.rb"
+    #   puts "\n***Finished creating configuration***"
+    # end
 
     def stocket_brand_msg(msg)
       puts "Stocket - ".green + msg
