@@ -16,8 +16,6 @@ module Stocket
       puts "Set environment to DEVELOPMENT"
 
       system "#{cd_into_project} && npx react-native run-ios #{device_type} #{device_name} --scheme #{scheme}"
-
-      puts_ascii
     end
 
     def self.update(env)

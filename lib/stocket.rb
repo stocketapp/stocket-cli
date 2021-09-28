@@ -25,6 +25,7 @@ module Stocket
       stocket_brand_msg("npx react-native run-ios #{device_type} #{device_name} --scheme #{options[:scheme]}")
       
       Commands.build_and_run(device_type, device_name, options[:scheme])
+      puts_ascii
     end
 
     desc "config", "Create config file for Stocket"
