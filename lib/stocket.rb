@@ -37,6 +37,12 @@ module Stocket
       system "cd ~/Projects/Server/stocket-api && rails s"
     end
 
+    desc "update", "OTA update. Options available: Staging, Production"
+    option :env
+    def update
+      Commands.update(options[:env])
+    end
+
     # private methods
     private
 

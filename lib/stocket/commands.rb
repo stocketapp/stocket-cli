@@ -15,9 +15,19 @@ module Stocket
       stocket_brand_msg("Building Stocket on #{device_name} using the #{options[:scheme]} scheme.")
       stocket_brand_msg("npx react-native run-ios #{device_type} #{device_name} --scheme #{scheme}")
 
-      system "cd ~/Projects/ReactNative/stocket && npx react-native run-ios #{device_type} #{device_name} --scheme #{scheme}"
+      system "#{cd_into_project} && npx react-native run-ios #{device_type} #{device_name} --scheme #{scheme}"
 
       puts_ascii
+    end
+
+    def self.update(env)
+      system "#{cd_into_project} && appcenter codepush release-react -a stocketapp/Stocket -d #{env}"
+    end
+
+    private
+
+    def self.cd_into_project
+      "cd ~/Projects/ReactNative/stocket"
     end
   end
 end
