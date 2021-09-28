@@ -14,6 +14,8 @@ module Stocket
     def self.build_and_run(device_type, device_name, scheme)
       stocket_brand_msg("Building Stocket on #{device_name} using the #{options[:scheme]} scheme.")
       stocket_brand_msg("npx react-native run-ios #{device_type} #{device_name} --scheme #{scheme}")
+      create_config("dev")
+      puts "Set environment to DEVELOPMENT"
 
       system "#{cd_into_project} && npx react-native run-ios #{device_type} #{device_name} --scheme #{scheme}"
 
@@ -21,6 +23,8 @@ module Stocket
     end
 
     def self.update(env)
+      create_config("prod")
+      puts "Set environment to PRODUCTION"
       system "#{cd_into_project} && appcenter codepush release-react -a stocketapp/Stocket -d #{env}"
     end
 
