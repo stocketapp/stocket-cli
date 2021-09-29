@@ -1,5 +1,3 @@
-echo "Setting Production Environment Variables started"
-
 export IEX_CLOUD_KEY=pk_f1451968134e47d896eb4bc8a2366140
 export IEX_CLOUD_URL=https://cloud.iexapis.com/v1
 export STOCKET_APPSTORE_APP_SECRET=5436027089e44aea85f611fe71e9c63b
@@ -8,5 +6,6 @@ export GOOGLE_STOCKET_WEB_CLIENT_ID=883607112422-djgp4om0motfv2jgjbrrscdabfdjojo
 export IAPHUB_ENV=staging
 export IAPHUB_STOCKET_API_KEY=xKepVq1wVY6XMh8CjdQx8l4Jo5iWUxX
 export IAPHUB_STOCKET_APP_ID=5edf9155f2bc8c0e96dc7f93
+export BUGBATTLE_KEY=sNVlclYU8v7n4tR4sDYkrjLJ33E2KBl3
 
-echo "Setting Environment Variables finished"
+echo "Set Staging Environment Variables"
