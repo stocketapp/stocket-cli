@@ -20,7 +20,7 @@ module Stocket
     option :device, :type => :boolean, :default => false
     def ios
       device_type = options[:device] ? "--device" : "--simulator"
-      device_name = options[:device] ? "'Henry’s iPhone 11 Pro'" : "'iPhone 12 Pro'"
+      device_name = options[:device] ? "'Henry’s iPhone 11 Pro'" : "'iPhone 13 Pro'"
       stocket_brand_msg("Building Stocket on #{device_name} using the #{options[:scheme]} scheme.")
       stocket_brand_msg("npx react-native run-ios #{device_type} #{device_name} --scheme #{options[:scheme]}")
       
