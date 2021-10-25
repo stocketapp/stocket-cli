@@ -37,7 +37,7 @@ module Stocket
 
     desc "server", "Start Rails Server"
     def server
-      system "cd ~/Projects/Server/stocket-api && rails s"
+      system "cd ~/Projects/Stocket/stocket-api && rails s"
     end
 
     desc "update", "OTA update. Options available: Staging, Production"

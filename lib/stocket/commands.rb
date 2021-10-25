@@ -8,7 +8,7 @@ module Stocket
     end
 
     def self.start_rn_server(reset)
-      system "cd ~/Projects/ReactNative/stocket && npx react-native start#{reset}"
+      system "cd ~/Projects/Stocket/stocket && npx react-native start#{reset}"
     end
 
     def self.build_and_run(device_type, device_name, scheme)
@@ -27,7 +27,7 @@ module Stocket
     private
 
     def self.cd_into_project
-      "cd ~/Projects/ReactNative/stocket"
+      "cd ~/Projects/Stocket/stocket"
     end
   end
 end

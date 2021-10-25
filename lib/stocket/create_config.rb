@@ -15,7 +15,7 @@ GOOGLE_STOCKET_WEB_CLIENT_ID = ENV['GOOGLE_STOCKET_WEB_CLIENT_ID']
 BUGBATTLE_KEY = ENV['BUGBATTLE_KEY']
 
 
-open("/Users/henry/Projects/ReactNative/stocket/config.js", 'w') { |output_file|
+open("/Users/henry/Projects/Stocket/stocket/config.js", 'w') { |output_file|
   output_file.puts "export const IEX_CLOUD_KEY = '#{IEX_CLOUD_KEY}'"
   puts "\nAdded IEX_CLOUD_KEY"
   output_file.puts "export const IAPHUB_STOCKET_API_KEY = '#{IAPHUB_STOCKET_API_KEY}'"
