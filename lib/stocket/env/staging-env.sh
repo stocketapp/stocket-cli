@@ -6,6 +6,6 @@ export GOOGLE_STOCKET_WEB_CLIENT_ID=883607112422-djgp4om0motfv2jgjbrrscdabfdjojo
 export IAPHUB_ENV=staging
 export IAPHUB_STOCKET_API_KEY=xKepVq1wVY6XMh8CjdQx8l4Jo5iWUxX
 export IAPHUB_STOCKET_APP_ID=5edf9155f2bc8c0e96dc7f93
-export BUGBATTLE_KEY=sNVlclYU8v7n4tR4sDYkrjLJ33E2KBl3
+export GLEAP_KEY=sNVlclYU8v7n4tR4sDYkrjLJ33E2KBl3
 
 echo "Set Staging Environment Variables"
