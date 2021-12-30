@@ -12,7 +12,7 @@ ONESIGNAL_APPID = ENV['ONESIGNAL_APPID']
 STOCKET_APPSTORE_APP_SECRET = ENV['STOCKET_APPSTORE_APP_SECRET']
 GOOGLE_STOCKET_WEB_CLIENT_ID = ENV['GOOGLE_STOCKET_WEB_CLIENT_ID']
 
-BUGBATTLE_KEY = ENV['BUGBATTLE_KEY']
+GLEAP_KEY = ENV['GLEAP_KEY']
 
 
 open("/Users/henry/Projects/Stocket/stocket/config.js", 'w') { |output_file|
@@ -32,6 +32,6 @@ open("/Users/henry/Projects/Stocket/stocket/config.js", 'w') { |output_file|
   puts "Added STOCKET_API_URL"
   output_file.puts "export const GOOGLE_STOCKET_WEB_CLIENT_ID = '#{GOOGLE_STOCKET_WEB_CLIENT_ID}'"
   puts "Added GOOGLE_STOCKET_WEB_CLIENT_ID"
-  output_file.puts "export const BUGBATTLE_KEY = '#{BUGBATTLE_KEY}'"
-  puts "Added BUGBATTLE_KEY"
+  output_file.puts "export const GLEAP_KEY = '#{GLEAP_KEY}'"
+  puts "Added GLEAP_KEY"
 }
