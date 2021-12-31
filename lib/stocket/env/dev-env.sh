@@ -1,7 +1,7 @@
 export IEX_CLOUD_KEY=Tpk_c84b305df0ca4fee99432f92635ed144
 export IEX_CLOUD_URL=https://sandbox.iexapis.com/stable
 export STOCKET_APPSTORE_APP_SECRET=5436027089e44aea85f611fe71e9c63b
-export STOCKET_API_URL=https://devapi.stocketapp.com/graphql
+export STOCKET_API_URL=http://localhost:3000/graphql
 export GOOGLE_STOCKET_WEB_CLIENT_ID=1072088358272-mt4tu8f479b53nbm28ab702oc4v1tkig.apps.googleusercontent.com
 export IAPHUB_ENV=development
 export IAPHUB_STOCKET_API_KEY=xKepVq1wVY6XMh8CjdQx8l4Jo5iWUxX
