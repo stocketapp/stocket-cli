@@ -1,14 +1,14 @@
 PATH
   remote: .
   specs:
-    stocket (1.4.0)
+    stocket (1.5.0)
 
 GEM
   remote: https://rubygems.org/
   specs:
     colorize (0.8.1)
     rake (12.3.3)
-    thor (1.0.1)
+    thor (1.1.0)
 
 PLATFORMS
   ruby
