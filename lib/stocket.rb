@@ -18,13 +18,14 @@ module Stocket
     desc "ios", "Build and run the app in the iOS simulator"
     option :scheme, :default => "Development"
     option :device, :type => :boolean, :default => false
+    option :env, :default => "dev"
     def ios
       device_type = options[:device] ? "--device" : "--simulator"
       device_name = options[:device] ? "'Henry’s iPhone 11 Pro'" : "'iPhone 13 Pro'"
       stocket_brand_msg("Building Stocket on #{device_name} using the #{options[:scheme]} scheme.")
       stocket_brand_msg("npx react-native run-ios #{device_type} #{device_name} --scheme #{options[:scheme]}")
       
-      Commands.build_and_run(device_type, device_name, options[:scheme])
+      Commands.build_and_run(device_type, device_name, options[:scheme], options[:env])
       puts_ascii
     end
 

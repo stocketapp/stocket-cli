@@ -11,8 +11,8 @@ module Stocket
       system "cd ~/Projects/Stocket/stocket && npx react-native start#{reset}"
     end
 
-    def self.build_and_run(device_type, device_name, scheme)
-      create_config("dev")
+    def self.build_and_run(device_type, device_name, scheme, env)
+      create_config(env)
       puts "Set environment to DEVELOPMENT"
 
       system "#{cd_into_project} && npx react-native run-ios #{device_type} #{device_name} --scheme #{scheme}"
